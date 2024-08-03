@@ -16,32 +16,32 @@ public class Joystick : MonoBehaviour
     private Transform joystickImage;
 
     [SerializeField]
-    private float forceX;
-    public float ForceX
+    private float horizontal;
+    public float Horizontal
     {
         get
         {
-            return forceX;
+            return horizontal;
         }
 
         private set
         {
-            forceX = value;
+            horizontal = value;
         }
     }
 
     [SerializeField]
-    private float forceY;
-    public float ForceY
+    private float vertical;
+    public float Vertical
     {
         get
         {
-            return forceY;
+            return vertical;
         }
 
         private set
         {
-            forceY = value;
+            vertical = value;
         }
     }
 
@@ -77,14 +77,14 @@ public class Joystick : MonoBehaviour
                 joystickImage.position = transform.position + (direction.normalized * maxDistance);
             }
 
-            forceX = joystickImage.localPosition.x / maxDistance;
-            forceY = joystickImage.localPosition.y / maxDistance;
+            horizontal = joystickImage.localPosition.x / maxDistance;
+            vertical = joystickImage.localPosition.y / maxDistance;
         }
         else
         {
             joystickImage.transform.localPosition = new Vector3();
-            forceX = 0;
-            forceY = 0;
+            horizontal = 0;
+            vertical = 0;
         }
     }
 }

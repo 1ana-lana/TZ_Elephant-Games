@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator animator;
     [SerializeField]
+    private GameObject body;
+    [SerializeField]
     private float speed = 20f;
     [SerializeField]
     private float turnSpeed = 5f;
@@ -43,18 +45,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-        transform.Rotate(Vector3.up, rotateInput * turnSpeed * Time.deltaTime);
-
         if (forwardInput == 0 && rotateInput == 0) 
         {
             animator.SetBool("isWalking", false);
@@ -62,6 +55,9 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("isWalking", true);
+            transform.Translate(transform.forward * Time.deltaTime * speed * forwardInput);
+            transform.Translate(transform.right * Time.deltaTime * speed * rotateInput);
+            body.transform.LookAt(transform.localPosition + new Vector3(rotateInput, 0, forwardInput));
         }
     }
 }

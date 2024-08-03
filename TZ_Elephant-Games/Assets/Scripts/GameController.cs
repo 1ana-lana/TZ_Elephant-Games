@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerController.ForwardInput = joystick.ForceY;
-        playerController.RotateInput = joystick.ForceX;
+        playerController.ForwardInput = joystick.Vertical;
+        playerController.RotateInput = joystick.Horizontal;
     }
 }

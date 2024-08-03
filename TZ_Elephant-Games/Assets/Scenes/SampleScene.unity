@@ -631,8 +631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonProvaider: {fileID: 1063074713}
   joystickImage: {fileID: 293131004}
-  forceX: 0
-  forceY: 0
+  horizontal: 0
+  vertical: 0
 --- !u!114 &1063074713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,6 +715,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063074710}
   m_CullTransparentMesh: 1
+--- !u!1 &1066890320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1179832716302079356, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
+  m_PrefabInstance: {fileID: 1818420693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1290208633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5103954987383861074, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
@@ -733,6 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2137966328}
+  body: {fileID: 1066890320}
   speed: 20
   turnSpeed: 100
   forwardInput: 0
@@ -805,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.11
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalPosition.y
@@ -813,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.83
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalRotation.w
