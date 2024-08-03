@@ -5,9 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private Animator animator;
+    [SerializeField]
     private float speed = 20f;
     [SerializeField]
     private float turnSpeed = 5f;
+
+    private bool isWalking = false;
 
     [SerializeField]
     private float forwardInput = 0;
@@ -50,5 +54,14 @@ public class PlayerController : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         transform.Rotate(Vector3.up, rotateInput * turnSpeed * Time.deltaTime);
+
+        if (forwardInput == 0 && rotateInput == 0) 
+        {
+            animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            animator.SetBool("isWalking", true);
+        }
     }
 }
