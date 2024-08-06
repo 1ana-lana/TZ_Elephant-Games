@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,8 +10,6 @@ public class PlayerController : MonoBehaviour
     private float speed = 20f;
     [SerializeField]
     private float turnSpeed = 5f;
-
-    private bool isWalking = false;
 
     [SerializeField]
     private float forwardInput = 0;
