@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private float speed = 20f;
     [SerializeField]
     private float turnSpeed = 5f;
+    [SerializeField]
+    private Rigidbody rb;
 
     [SerializeField]
     private float forwardInput = 0;
@@ -51,8 +53,10 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("isWalking", true);
-            transform.Translate(transform.forward * Time.deltaTime * speed * forwardInput);
-            transform.Translate(transform.right * Time.deltaTime * speed * rotateInput);
+
+            Vector3 movement = new Vector3(rotateInput, 0.0f, forwardInput);
+            rb.velocity = movement * speed;
+
             body.transform.LookAt(transform.localPosition + new Vector3(rotateInput, 0, forwardInput));
         }
     }

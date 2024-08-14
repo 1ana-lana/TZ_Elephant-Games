@@ -169,7 +169,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &159497270
 MeshRenderer:
@@ -426,7 +426,6 @@ GameObject:
   - component: {fileID: 510974049}
   - component: {fileID: 510974048}
   - component: {fileID: 510974047}
-  - component: {fileID: 510974046}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: Untagged
@@ -449,22 +448,6 @@ Transform:
   m_Father: {fileID: 858968686}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &510974046
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510974044}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 1
 --- !u!136 &510974047
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -475,7 +458,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.65
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -590,7 +573,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.65
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -675,7 +658,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.1, z: 1.3}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &558180885
 MeshRenderer:
@@ -1037,7 +1020,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &886289129
 MeshRenderer:
@@ -1410,7 +1393,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.1, z: 1.3}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1219639308
 MeshRenderer:
@@ -1481,8 +1464,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2137966328}
   body: {fileID: 1066890320}
-  speed: 20
+  speed: 5
   turnSpeed: 100
+  rb: {fileID: 1290208638}
   forwardInput: 0
   rotateInput: 0
 --- !u!65 &1290208637
@@ -1496,7 +1480,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 1.5, y: 2, z: 1.5}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &1290208638
 Rigidbody:
@@ -1542,8 +1526,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582028171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.6, y: 0.91, z: -4.6}
-  m_LocalScale: {x: 5, y: 2, z: 2}
+  m_LocalPosition: {x: 10.7741, y: 0.91, z: -3.6569}
+  m_LocalScale: {x: 5.348, y: 2, z: 3.8862}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 858968686}
@@ -1576,7 +1560,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.1, z: 1.3}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1582028175
 MeshRenderer:
@@ -1720,7 +1704,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1803576035
 MeshRenderer:
@@ -1813,7 +1797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1821,7 +1805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.38
+      value: -5.31
       objectReference: {fileID: 0}
     - target: {fileID: 7807215059478422899, guid: 28bcb1907b6384d4da1a6e31b9d269be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1982,7 +1966,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.65
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
