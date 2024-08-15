@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(ButtonProvaider))]
 public class Joystick : MonoBehaviour
 {
     private float maxDistance;
@@ -57,7 +56,7 @@ public class Joystick : MonoBehaviour
         buttonProvaider.PointerDown += ButtonProvaider_PointerDown;
         buttonProvaider.PointerUp += ButtonProvaider_PointerUp;
 
-        maxDistance = (GetComponent<RectTransform>().rect.height) / 2;
+        maxDistance = (GetComponent<RectTransform>().rect.height) / 2 - joystickTransform.GetComponent<RectTransform>().rect.height / 2;
 
         joystickImage = joystickTransform.GetComponent<Image>();
         joystickBackImage = GetComponent<Image>();
@@ -74,6 +73,7 @@ public class Joystick : MonoBehaviour
 
     private void ButtonProvaider_PointerDown(PointerEventData e)
     {
+        transform.position = e.position;
         isUse = true;
     }
 
